@@ -30,4 +30,5 @@ Route::get('posts/{post}', function ($slug) {
     return view('post', [
         'post' => $post
     ]);
+    //this is where wildcard constraint are written {where('post', '[A-z_\-]+')}
 })->where('post', '[A-z_\-]+');
