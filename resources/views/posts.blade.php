@@ -1,11 +1,11 @@
 <!doctype html>
 
-<title>My Blog</title>
+<title>Danny's Blog</title>
 <link rel="stylesheet" href="/app.css">
 
 <body>
     <article>
-        <h1><a href="/post">First Post</a></h1>
+        <h1><a href="/posts/my-first-post">First Post</a></h1>
 
         <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias harum error modi cum inventore nesciunt
@@ -13,7 +13,7 @@
         </p>
     </article>
     <article>
-        <h1><a href="/post">Second Post</a></h1>
+        <h1><a href="/posts/my-second-post">Second Post</a></h1>
 
         <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias harum error modi cum inventore nesciunt
@@ -21,7 +21,7 @@
         </p>
     </article>
     <article>
-        <h1><a href="/post">Third Post</a></h1>
+        <h1><a href="/posts/my-third-post">Third Post</a></h1>
 
         <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias harum error modi cum inventore nesciunt
