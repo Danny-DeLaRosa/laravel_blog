@@ -18,15 +18,18 @@ Route::get('/', function () {
 });
 
 Route::get('posts/{post}', function ($slug) {
-    $path = __DIR__. "/../resources/posts/{$slug}.html";
-
-
-    if (! file_exists($path)) {
+    // Build a path to the post's HTML file
+    // check to see if the file exists
+    if (!file_exists($path = __DIR__ . "/../resources/posts/{$slug}.html")) {
         return redirect('/');
     }
-
-    $post = file_get_contents($path);
-
+    // fetch the contents of that file
+    // set $post variable to cache the contents
+    $post = cache()->remember("posts.{$slug}", 5, function () use ($path) {
+        var_dump('files_get_contents');
+        return file_get_contents($path);
+    });
+    // pass content to the view
     return view('post', [
         'post' => $post
     ]);
